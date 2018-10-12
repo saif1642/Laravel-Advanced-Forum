@@ -73,10 +73,25 @@
                 </div>
             </div>
         </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                       <ul class="list-group">
+                            @foreach ($channels as $channel)
+                           <li class="list-group-item">
+                                {{ $channel->title }}
+                           </li>
+                           @endforeach
+                       </ul>
+                        
+                   
+                </div>
+                <div class="col-md-8">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
     </div>
 
     <script src="{{ asset('js/toastr.min.js') }}" ></script>
