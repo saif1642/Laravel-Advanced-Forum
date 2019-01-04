@@ -76,13 +76,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                       <ul class="list-group">
-                            @foreach ($channels as $channel)
-                           <li class="list-group-item">
-                                {{ $channel->title }}
-                           </li>
-                           @endforeach
-                       </ul>
+                    <br><br>
+                    <a href="{{route('discussions.create')}}" class="form-control btn btn-primary">
+                        Create a new Discussion
+                    </a>
+                    <br><br>
+                    <ul class="list-group">
+                        @foreach ($channels as $channel)
+                        <li class="list-group-item">
+                            {{ $channel->title }}
+                        </li>
+                        @endforeach
+                    </ul>
                         
                    
                 </div>
